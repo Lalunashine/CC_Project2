@@ -14,11 +14,12 @@ function MusicalNote() {
   }
 
   this.hit = function(beat) {
-    if (dist(this.position.x, this.position.y, beat.position.x, beat.position.y) < 5) {
-      this.velocity.y = 350;
+    if ((keyIsDown(32)) && (dist(this.position.x, this.position.y, beat.position.x, beat.position.y) < 5)) {
+      this.velocity.y = 0;
       return true;
+    } else {
+      return false;
     }
-    return false;
   }
 
 }
