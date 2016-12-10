@@ -89,7 +89,7 @@ function draw() {
 
 function noteFalling() {
   console.log(frameCount);
-  if ((frameCount > 265) && (frameCount % 50 === 0)) { // later will be executed with the music rhythm
+  if ((frameCount > 260) && (frameCount % 52 === 0)) { // later will be executed with the music rhythm
     var n = new MusicalNote();
     notes.push(n);
   }
@@ -197,7 +197,7 @@ function exitGame() {
     fill(200, 200, 200);
     text("Game Over", width / 2 - 50, height / 2 - 10);
     console.log("test");
-    text("Your score is  " + score, width / 2 - 50, height / 2 + 10);
+    text("Your score is  " + score, width / 2 - 60, height / 2 + 10);
 
     song.stop();
     noLoop();
