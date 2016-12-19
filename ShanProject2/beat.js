@@ -1,5 +1,5 @@
 function Beat() {
-  this.position = createVector(width/2, 350);
+  this.position = createVector(width/2, 400);
   this.c = 0;
 
   this.display = function() {
@@ -9,7 +9,7 @@ function Beat() {
   }
   
   this.update = function() {
-    this.c += 5;
+    this.c += 8;
   }
   
   this.disappear = function() {

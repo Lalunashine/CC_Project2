@@ -18,13 +18,13 @@ Button = function(_x, _y, _w, _h) {
     if (this.contain(mx, my)) {
       fill(100);
     } else {
-      fill(175);
+      fill(170);
     }
     noStroke(0);
     rect(x, y, w, h);
 
     fill(50);
     textSize(10);
-    text(word, x, y + h*2/3);
+    text(word, x+5, y + h*2/3);
   };
 }
