@@ -121,7 +121,7 @@ function noteFalling() {
     fill(200, grn, 200);
 
     if (grn < 255) {
-      textSize(50);
+      textSize(60);
       fill(100, grn, 200);
       text("HIT", 550, 250);
       bonusFlowers[bonusFlowers.length - 1].display();
@@ -151,7 +151,7 @@ function noteFalling() {
           hitFlag = false;
           recess = 0;
 
-          var bonusf = new Flower(width / 3, height / 2 - 60, 180 * bonusFlowers.length);
+          var bonusf = new Flower(width / 3, height / 2 - 60, 180 * bonusFlowers.length, 24.0);
           bonusFlowers.push(bonusf);
         }
       }
@@ -220,19 +220,22 @@ function exitGame() {
     rect(0, 0, width, height); // add white shade on background
     //image(imgs[1], width / 4 - imgs[1].width / 2, height / 2 + imgs[1].height / 2);
 
-    textSize(20);
-    fill(150);
-    text("Game Over", width / 4 - 50, height / 2 - 50);
-    text("Your score is  " + score, width / 4 - 60, height / 2 - 20);
-
     if (score > 0) {
       for (var i = 0; i < score; i++) {
-        var scoref = new Flower(random(50, width / 2), random(50, height - 50), 36 * scoreFlowers.length);
+        var scoref = new Flower(random(50, width / 2), random(50, height - 50), 36 * scoreFlowers.length, 12.0);
         scoreFlowers.push(scoref);
         scoreFlowers[i].display();
         console.log("hello");
       }
     }
+
+    fill(255, 100);
+    rect(width / 4 - 90, height / 2 - 85, 245, 100); // add white shade under text
+
+    textSize(30);
+    fill(150);
+    text("Game Over", width / 4 - 50, height / 2 - 50);
+    text("Your score is  " + score, width / 4 - 80, height / 2);
 
     song.stop();
     noLoop();

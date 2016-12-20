@@ -1,11 +1,11 @@
-function Flower(_x, _y, _angle) {
+function Flower(_x, _y, _angle, _totalSize) {
   this.green = 0;
   this.blue = 0;
   this.alpha = random(150, 255);
 
   this.angle = _angle; // for petal
   this.theta = 0.01; // for rotate
-  this.size = cos(radians(this.angle)) * 12.0;
+  this.size = cos(radians(this.angle)) * _totalSize;
 
   this.position = createVector(_x, _y);
   this.direction = random(0, TWO_PI);
