@@ -1,6 +1,6 @@
 function Beat() {
   this.position = createVector(width/2, 400);
-  this.c = 0;
+  this.c = 0; // color
 
   this.display = function() {
     noStroke();

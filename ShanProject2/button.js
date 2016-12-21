@@ -1,8 +1,8 @@
 Button = function(_x, _y, _w, _h) {
   var x = _x;
   var y = _y;
-  var w = _w;
-  var h = _h;
+  var w = _w; // width
+  var h = _h; // height
 
   // Is a point inside the button? (used for mouse rollover, etc.)
   this.contain = function(mx, my) {
