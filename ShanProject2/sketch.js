@@ -27,7 +27,7 @@ function draw() {
   rect(0, 0, width, height); // add white cover on it to make it fade
 
   for (var i = 0; i < 2; i++) {
-    if ((mouseX > width / 2 - imgs[i].width) && (mouseX < (width / 2 + imgs[i].width)) && (mouseY > (height / 3 - imgs[i].height / 2)) && (mouseY < (height / 3 + imgs[i].height / 2))) {
+    if ((mouseX > width / 2 - imgs[i].width/2) && (mouseX < (width / 2 + imgs[i].width/2)) && (mouseY > (height / 3 - imgs[i].height / 2)) && (mouseY < (height / 3 + imgs[i].height / 2))) {
       image(imgs[1], width / 2 - imgs[i].height / 2, height / 3 - imgs[1].height / 2); // mouse on star, open eye
       if (mouseIsPressed) { // click star
         location.href = gameLink; // shift to game interface
